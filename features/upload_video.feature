@@ -1,8 +1,7 @@
 Feature: Upload videos of club events
-
-   As a Club President 
-   So that I can show people how club events are like
-   I want to upload videos of club events onto club website
+    As a Club President
+    So that I can show people what club events are like
+    I want to upload videos of club events onto club website
 
 Scenario: upload a new video
 	When I go to the videos page
@@ -10,10 +9,8 @@ Scenario: upload a new video
 	And I select "some video"
 	Then I should see "some video" added to the videos page
 
-Given the following video exists:
-	"some video"
-
 Scenario: Delete a video
+    Given the following video exists: "some video"
 	When I go to the videos page
 	And I select "some video"
 	And I press "Delete video"	
