@@ -1,7 +1,6 @@
 Feature: RSVP to club events
-
    As a Club Member
-   So that I can RSVP for a club event 
+   So that I can attend a club event
    I want to RSVP on the club website
 
 Scenario: Sign up for a club event
@@ -12,11 +11,9 @@ Scenario: Sign up for a club event
 	And I fill "Email" with "SomeName@SomeEmail.Somecom"
 	Then I should see "John Garo, SomeName@SomeEmail.Somecom"
 
-Given the following RSVP exists:
-	"John Garo, SomeName@SomeEmail.SomeCom" 
-
 Scenario: Delete a RSVP
-	When I go to the RSVP page
+    Given the following RSVP exists: "John Garo, SomeName@SomeEmail.SomeCom"
+    When I go to the RSVP page
 	And I select "John Garo, SomeName@SomeEmail.SomeCom" 
 	And I select "Delete RSVP"
 	Then I should see "John Garo, SomeName@SomeEmail.SomeCom" deleted.
