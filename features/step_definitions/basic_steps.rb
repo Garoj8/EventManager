@@ -1,4 +1,4 @@
-Given(/^that I am on the home page$/) do
+Given(/^(that )?I am on the home page$/) do |that|
   visit 'index.html'
 end
 
