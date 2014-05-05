@@ -12,8 +12,8 @@ Scenario: Sign up for a role
 	Then I should see "John Garo, Role = Guest Speaker"
 
 Scenario: Delete an entry
-    Given the following entry exists: "John Garo, Role = Guest Speaker"
-    When I go to the Role-Sign-up page
-	And select "John Garo, Role = Guest Speaker"
-	And press "Delete entry"
+	When I go to the Role-Sign-up page   
+	Given the following entry exists: "John Garo, Role = Guest Speaker"
+   And check "checkbox_1"
+	And press "Delete"
 	Then I should see "John garo, Role = Guest Speaker" removed from the Role-Sign-up list.
