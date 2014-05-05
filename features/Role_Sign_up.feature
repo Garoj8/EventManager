@@ -8,6 +8,7 @@ Scenario: Sign up for a role
 	And I fill in "First Name" with "John"
 	And I fill in "Last Name" with "Garo"
 	And I fill in "Role" with "Guest Speaker"
+	And I press "Submit"
 	Then I should see "John Garo, Role = Guest Speaker"
 
 Scenario: Delete an entry
